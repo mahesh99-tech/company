@@ -31,7 +31,7 @@
     </dependencies>
     <build>
         <plugins>
-          <plugin>
+           <plugin>
                 <groupId>org.jboss.as.plugins</groupId>
                 <artifactId>jboss-as-maven-plugin</artifactId>
                 <version>7.9.Final</version>
@@ -39,8 +39,13 @@
                     <execution>
                         <phase>install</phase>
                         <goals>
-                            <goal>deploy</goal>
+                            <goal>deploy-artifact</goal>
                         </goals>
+                        <configuration>
+                            <groupId>com.companyname.automobile</groupId>
+                            <artifactId>trucks</artifactId>
+                            <name>trucks-1.war</name>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>

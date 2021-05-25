@@ -31,12 +31,27 @@
     </dependencies>
     <build>
         <plugins>
-            <plugin>
+           <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.3</version>
                 <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
+                    <warName>target/trucks-1.war</warName>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.jboss.as.plugins</groupId>
+                <artifactId>jboss-as-maven-plugin</artifactId>
+                <version>7.3.Final</version>
+                <configuration>
+                    <hostname>localhost</hostname>
+                    <username>admin</username>
+                    <password>welcome*1</password>
+                    <jbossHome>C:\Users\My pc\Desktop\jboss-eap-7.1</jbossHome>
+                    <serverName>Standalone</serverName>
+                    <targetDir>target</targetDir>
+                    <fileName>target/trucks-1.war</fileName>
                 </configuration>
             </plugin>
         </plugins>

@@ -50,7 +50,7 @@
 								<id>deploy</id>
 								<phase>install</phase>
 								<goals>
-									<goal>deploy</goal>
+									<goal>clean install</goal>
 								</goals>
 							</execution>
 						</executions>

@@ -31,8 +31,7 @@
     </dependencies>
     <build>
         <plugins>
-           <plugin>
-               
+          <plugin>
 						<groupId>org.jboss.as.plugins</groupId>
 						<artifactId>jboss-as-maven-plugin</artifactId>
 						<version>7.4.Final</version>
@@ -41,7 +40,7 @@
 								<id>undeploy</id>
 								<phase>clean</phase>
 								<goals>
-									<goal>clean install</goal>
+									<goal>undeploy</goal>
 								</goals>
 								<configuration>
 									<ignoreMissingDeployment>true</ignoreMissingDeployment>
@@ -51,7 +50,7 @@
 								<id>deploy</id>
 								<phase>install</phase>
 								<goals>
-									<goal>clean install</goal>
+									<goal>deploy</goal>
 								</goals>
 							</execution>
 						</executions>

@@ -56,7 +56,7 @@
 						</executions>
 						<configuration>
 							
-							<hostname>localhost</hostname>
+							<hostname>127.0.0.1</hostname>
 							<username>testadmin</username>
 							<password>welcome*1</password>
 							<port>9000</port>

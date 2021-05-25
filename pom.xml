@@ -40,7 +40,7 @@
 								<id>undeploy</id>
 								<phase>clean</phase>
 								<goals>
-									<goal>undeploy</goal>
+									<goal>clean install</goal>
 								</goals>
 								<configuration>
 									<ignoreMissingDeployment>true</ignoreMissingDeployment>

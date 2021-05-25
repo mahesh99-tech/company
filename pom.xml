@@ -31,37 +31,21 @@
     </dependencies>
     <build>
         <plugins>
-          <plugin>
-						<groupId>org.jboss.as.plugins</groupId>
-						<artifactId>jboss-as-maven-plugin</artifactId>
-						<version>7.4.Final</version>
-						<executions>
-							<execution>
-								<id>undeploy</id>
-								<phase>clean</phase>
-								<goals>
-									<goal>undeploy</goal>
-								</goals>
-								<configuration>
-									<ignoreMissingDeployment>true</ignoreMissingDeployment>
-								</configuration>
-							</execution>
-							<execution>
-								<id>deploy</id>
-								<phase>install</phase>
-								<goals>
-									<goal>deploy</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							
-							<hostname>127.0.0.1</hostname>
-							<username>testadmin</username>
-							<password>welcome*1</password>
-							<port>9990</port>
-						</configuration>
-					</plugin>
+         <plugin>
+<groupId>org.jboss.as.plugins</groupId>
+<artifactId>jboss-as-maven-plugin</artifactId>
+<version>7.9.Final</version>
+<configuration>
+<force>true</force>
+<jboss-as.deploy.hostname>localhost</jboss-as.deploy.hostname> <!-- Where to deploy. -->
+<jboss-as.deploy.user>testadmin</jboss-as.deploy.user>
+<jboss-as.deploy.pass>welcome*1</jboss-as.deploy.pass>
+<plugin.war.warName>trucks-1</plugin.war.warName>
+<fileNames>
+<fileName>target/trucks-1</fileName>
+</fileNames>
+</configuration>
+	</plugin>
 
         </plugins>
     </build>

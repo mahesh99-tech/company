@@ -38,16 +38,36 @@
     <build>
         <plugins>
 <plugin>
-    <groupId>org.jboss.as.plugins</groupId>
-    <artifactId>jboss-as-maven-plugin</artifactId>
-    <version>${jboss.as.plugin.version}</version>
-    <configuration>
-        <hostname>localhost</hostname>
-        <username>{user name}</username>
-        <password>{password}</password>
-        <port>9999</port>
-    </configuration>
-</plugin>
+						<groupId>org.jboss.as.plugins</groupId>
+						<artifactId>jboss-as-maven-plugin</artifactId>
+						<version>7.4.Final</version>
+						<executions>
+							<execution>
+								<id>undeploy</id>
+								<phase>clean</phase>
+								<goals>
+									<goal>undeploy</goal>
+								</goals>
+								<configuration>
+									<ignoreMissingDeployment>true</ignoreMissingDeployment>
+								</configuration>
+							</execution>
+							<execution>
+								<id>deploy</id>
+								<phase>install</phase>
+								<goals>
+									<goal>deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							
+							<hostname>localhost</hostname>
+							<username>testadmin</username>
+							<password>welcome*1</password>
+							<port>9999</port>
+						</configuration>
+					</plugin>
         </plugins>
     </build>
 </project>

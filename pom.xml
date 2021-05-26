@@ -28,6 +28,12 @@
             <artifactId>ozark</artifactId>
             <version>1.0.0-m01</version>
         </dependency>
+        <dependency>
+            <groupId>org.jboss.as.plugins</groupId>
+            <artifactId>jboss-as-maven-plugin</artifactId>
+            <version>7.9.Final</version>
+            <type>maven-plugin</type>
+    </dependency>
     </dependencies>
     <build>
         <plugins>
